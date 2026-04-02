@@ -10,7 +10,7 @@ st.set_page_config(page_title="Plantation Monitoring Dashboard", layout="wide")
 # -----------------------------
 @st.cache_data
 def load_data():
-    file_path = r"D:\Users\TC FANG\Downloads\plantation_soil_data (2).xlsm"
+    file_path = r"C:\Users\Du Yanzhang\OneDrive - National University of Singapore\Desktop\EE4409\CA1\plant_monitoring_data.xlsm"
     df = pd.read_excel(file_path)
     df["timestamp"] = pd.to_datetime(df["timestamp"], dayfirst=True, errors="coerce")
     df["date"] = df["timestamp"].dt.date
